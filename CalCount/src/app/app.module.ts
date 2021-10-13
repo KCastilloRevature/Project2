@@ -17,6 +17,7 @@ const routes: Routes = []
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
     NgbModule
   ],
