@@ -1,0 +1,8 @@
+<app-meal></app-meal>
+<div class="container">
+  <ul class="meals">
+    <li *ngFor="let meal of meals">
+      <span class="badge">{{ meal.name }}</span> {{ meal.description }}
+    </li>
+  </ul>
+</div>
