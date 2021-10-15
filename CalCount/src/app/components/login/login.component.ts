@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/User';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,4 +14,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  findCredentials(){
+    this.LoginService.findCredentials().subscribe(
+      (data) => {
+        
+      }
+    )
+  }
 }
