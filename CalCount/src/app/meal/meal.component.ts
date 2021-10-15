@@ -11,6 +11,9 @@ import { MealService } from '../services/meal.service';
 export class MealComponent implements OnInit {
   public meals: Meal[] = [];
 
+  public mealForm: boolean = false;
+  public exerciseForm: boolean = false;
+
   public user: User = {
     "name": "name",
     "email": "email@email.com",
@@ -45,11 +48,22 @@ export class MealComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submitted = false;
-
-  onSubmit() {
-    this.submitted = true;
+  expandMealForm(){
+    this.mealForm = true;
   }
+
+  onSubmitMeal() {
+    this.mealForm = false;
+  }
+
+  expandExerciseForm(){
+    this.exerciseForm = true;
+  }
+
+  onSubmitExercise() {
+    this.exerciseForm = false;
+  }
+
 
   newMeal() {
     console.log("component function");

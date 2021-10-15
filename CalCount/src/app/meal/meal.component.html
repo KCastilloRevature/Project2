@@ -1,8 +1,15 @@
-<h2>Submissions</h2>
 <div class="container">
   <div class="row">
+    <div  class="col text-center">
+      <h2 (click)="expandMealForm()">Submit New Meal</h2>
+    </div>
+    <div class="col text-center">
+      <h2 (click)="expandExerciseForm()">Submit New Exercise</h2>
+    </div>
+  </div>
+  <div *ngIf="mealForm" class="row">
     <div class="col">
-      <form (Submit)="onSubmit()" #mealform="ngForm">
+      <form (Submit)="onSubmitMeal()" #mealform="ngForm">
         <div class="form-group">
           <label>Name</label>
           <input
@@ -45,7 +52,7 @@
       </form>
     </div>
     <div class="col">
-      <form (Submit)="onSubmit()" #mealform="ngForm">
+      <form (Submit)="onSubmitExercise()" #mealform="ngForm">
         <div class="form-group">
           <label>Name</label>
           <input

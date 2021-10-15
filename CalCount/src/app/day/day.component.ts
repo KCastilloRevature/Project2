@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meal } from '../models/Meal';
+import { User } from '../models/User';
 import { DayService } from '../services/day.service';
 
 @Component({
@@ -8,7 +9,36 @@ import { DayService } from '../services/day.service';
   styleUrls: ['./day.component.css'],
 })
 export class DayComponent implements OnInit {
-  public meals: Meal[] = [];
+  public user: User = {
+    "name": "name",
+    "email": "email@email.com",
+    "password": "password",
+    "height": 150,
+    "weight": 50,
+    "friends": [],
+    "id": 1
+}
+
+
+  public friends: User[] = [{
+    "name": "name",
+    "email": "email@email.com",
+    "password": "password",
+    "height": 150,
+    "weight": 50,
+    "friends": [],
+    "id": 1
+}];
+
+public meals: Meal[] = [{
+  id: 0,
+  user: this.user,
+  name: '',
+  calories: 0,
+  description: '',
+  exercise: false,
+  date: '',
+}];
 
   constructor(private dayService: DayService) {}
 
