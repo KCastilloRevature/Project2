@@ -24,6 +24,6 @@ export class User{
     }
 
     getWeight(){
-        
+        return this.weight
     }
 }
