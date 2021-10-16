@@ -1,5 +1,3 @@
-import * as internal from "stream";
-
 export class User{
     constructor(private name:string, private email:string, private password:string, 
         private height:number, private weight:number) {
