@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MealComponent } from './meal/meal.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { DayComponent } from './day/day.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: '/day',
-    component: MealComponent,
+    component: DayComponent,
   },
 ];
 
