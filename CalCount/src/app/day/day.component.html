@@ -1,0 +1,27 @@
+<app-meal></app-meal>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ngb-datepicker
+        #datepicker
+        [startDate]="{ month: 8, year: 2016 }"
+      >
+      </ngb-datepicker>
+    </div>
+    <div class="col">
+      <ul class="meals">
+        <li *ngFor="let meal of meals">
+          <span class="badge">{{ meal.name }}</span> {{ meal.description }}
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Friends List</h3>
+      <ul>
+        <li *ngFor="let friend of friends">
+          <span>{{friend.name}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
