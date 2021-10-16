@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { MealComponent } from './meal/meal.component';
 import { DayComponent } from './day/day.component';
+import { LoginComponent } from './login/login.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 const routes: Routes = []
 @NgModule({
@@ -16,7 +18,9 @@ const routes: Routes = []
     AppComponent,
     RecipeComponent,
     MealComponent,
-    DayComponent
+    DayComponent,
+    LoginComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
