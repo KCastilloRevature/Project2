@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  findCredentials: "http://localhost:8000//login" //CHANGE THIS ONE!!!
+  findCredentials: "http://localhost:8000/users/login", //CHANGE THIS ONE!!!
+  createUser: "http://localhost:8000/users/new" //CHANGE THIS ONE!!!
 };
 
 /*
