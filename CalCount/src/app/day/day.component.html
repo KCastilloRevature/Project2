@@ -22,7 +22,7 @@
     </div>
     <div id="friendlist" class="col text-center">
       <h3 id="friends">Friends List</h3>
-          <h4 id="friend" *ngFor="let friend of friends">{{ friend.name }}</h4>
+          <h4 (click)="changeUser(friend)" id="friend" *ngFor="let friend of friends">{{ friend.name }}</h4>
     </div>
   </div>
 </div>

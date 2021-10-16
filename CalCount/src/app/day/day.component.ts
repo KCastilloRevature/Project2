@@ -21,14 +21,17 @@ export class DayComponent implements OnInit {
 };
   public friends: User[] = [
     {
-      name: 'name',
-      email: 'email@email.com',
-      password: 'password',
-      height: 150,
-      weight: 50,
-      friends: [],
-      id: 1,
-    },
+      "id": 3,
+      "name": "name",
+      "email": "email@email.com",
+      "password": "password",
+      "height": 150,
+      "weight": 50,
+      "friends": [
+          1,
+          2
+      ]
+  }
   ];
 
   public meals: Meal[] = [
@@ -81,5 +84,9 @@ export class DayComponent implements OnInit {
       .subscribe((friends) => {
         this.friends = friends;
       });
+  }
+
+  changeUser(user: User) {
+    this.user = user;
   }
 }
