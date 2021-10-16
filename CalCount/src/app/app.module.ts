@@ -11,6 +11,8 @@ import { MealComponent } from './meal/meal.component';
 import { DayComponent } from './day/day.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { HeaderComponent } from './header/header.component';
+import { AbsPipe } from './abs.pipe';
 
 const routes: Routes = []
 @NgModule({
@@ -20,7 +22,9 @@ const routes: Routes = []
     MealComponent,
     DayComponent,
     LoginComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    HeaderComponent,
+    AbsPipe
   ],
   imports: [
     BrowserModule,

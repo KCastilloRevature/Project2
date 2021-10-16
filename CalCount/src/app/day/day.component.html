@@ -1,29 +1,28 @@
-<app-meal></app-meal>
+<app-header></app-header>
+<app-meal [date]="date" *ngIf="sessionUser.id === user.id" id="meal">
+</app-meal>
 <div class="container">
-  <div class="row">
+  <div class="row g-2">
     <div class="col">
-      <ngb-datepicker
-        #datepicker
-        [(ngModel)]="date"
-      >
-      </ngb-datepicker>
+      <ngb-datepicker [(ngModel)]="date"> </ngb-datepicker >
     </div>
     <div class="col">
       <div class="card" *ngFor="let meal of meals">
-        <div class="card-body">
-          <h5 class="card-title">{{meal.name}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{meal.calories}} Calories</h6>
-          <p class="card-text">{{meal.description}}</p>
+        <div
+          [ngStyle]="{
+            'background-color': meal.exercise == true ? 'red' : 'green'
+          }"
+          class="card-body"
+        >
+          <h5 class="card-title">{{ meal.name }}</h5>
+          <h6 class="card-subtitle mb-2">{{ meal.calories | abs }} Calories</h6>
+          <p class="card-text">{{ meal.description }}</p>
         </div>
       </div>
     </div>
-    <div class="col">
-      <h3>Friends List</h3>
-      <ul>
-        <li *ngFor="let friend of friends">
-          <span>{{friend.name}}</span>
-        </li>
-      </ul>
+    <div id="friendlist" class="col text-center">
+      <h3 id="friends">Friends List</h3>
+          <h4 id="friend" *ngFor="let friend of friends">{{ friend.name }}</h4>
     </div>
   </div>
 </div>

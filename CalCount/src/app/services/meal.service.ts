@@ -17,7 +17,6 @@ export class MealService {
   url: string = 'http://localhost:8080/meals/new';
 
   newMeal(meal: Meal): Observable<Object> {
-    console.log("service function");
     return this.http.post(this.url, meal)
   }
 }
