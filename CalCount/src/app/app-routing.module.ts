@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { LoginComponent } from './components/login/login.component';
-import { WeekPageComponent } from './components/week-page/week-page.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { DayComponent } from './day/day.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,12 @@ const routes: Routes = [
   },
 
   {
-    path: "/week-page",
-    component: WeekPageComponent
+    path: "/day",
+    component: DayComponent
+  }
+  {
+    path: "/profile",
+    component: ProfileComponent
   }
 ];
 
