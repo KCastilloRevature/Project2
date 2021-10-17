@@ -13,8 +13,24 @@ export class LoginComponent implements OnInit {
   constructor(private loginService:LoginService) { 
   }
 
-  user!: User; //maybe change this, for some reason TS see this as uninitalized?
-  updatedUser!: User; //maybe change this, for some reason TS see this as uninitalized?
+  user: User = {
+    "name": "name",
+    "email": "email@email.com",
+    "password": "password",
+    "height": 150,
+    "weight": 50,
+    "friends": [],
+    "id": 1
+};
+  updatedUser: User = {
+    "name": "name",
+    "email": "email@email.com",
+    "password": "password",
+    "height": 150,
+    "weight": 50,
+    "friends": [],
+    "id": 1
+};
 
   ngOnInit(): void {
   }
