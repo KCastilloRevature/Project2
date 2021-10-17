@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  findCredentials: "http://localhost:8000/users/login", 
+  createUser: "http://localhost:8000/users/new", 
+  findUser: "http://localhost:8000/users/{id}}", 
+  findUserFriends: "http://localhost:8000/users/{id}/friends", 
+  addFriend: "http://localhost:8000/users/{user_id}/add/{friend_id}",
 };
 
 /*
