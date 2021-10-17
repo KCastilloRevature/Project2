@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import { MealComponent } from './meal/meal.component';
-import { LoginComponent } from './login/login.component';
-import { CreateAccountComponent } from './create-account/create-account.component';
-import { DayComponent } from './day/day.component';
+import { RouterModule, Routes } from '@angular/router';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { LoginComponent } from './components/login/login.component';
+import { WeekPageComponent } from './components/week-page/week-page.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: LoginComponent,
+    path: "/login",
+    component: LoginComponent
   },
+
   {
-    path: '/create-account',
-    component: CreateAccountComponent,
+    path: "/create-account",
+    component: CreateAccountComponent
   },
+
   {
-    path: '/day',
-    component: DayComponent,
-  },
+    path: "/week-page",
+    component: WeekPageComponent
+  }
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
+
