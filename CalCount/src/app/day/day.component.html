@@ -1,0 +1,30 @@
+<app-header></app-header>
+<app-meal [date]="date" *ngIf="sessionUser.id === user.id" id="meal">
+</app-meal>
+<div class="container">
+  <div class="row g-2">
+    <div class="col text-center">
+      <div id="profile" routerLink="/profile"> My Profile </div>
+      <ngb-datepicker [(ngModel)]="date"> </ngb-datepicker >
+    </div>
+    <div class="col">
+      <div class="card" *ngFor="let meal of meals">
+        <div
+          [ngStyle]="{
+            'background-color': meal.exercise == true ? 'red' : 'green'
+          }"
+          class="card-body"
+        >
+          <h5 class="card-title">{{ meal.name }}</h5>
+          <h6 class="card-subtitle mb-2">{{ meal.calories | abs }} Calories</h6>
+          <p class="card-text">{{ meal.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div id="friendlist" class="col text-center">
+      <h3 id="friends">Friends List</h3>
+          <h4 (click)="changeUser(friend)" id="friend" *ngFor="let friend of friends">{{ friend.name }}</h4>
+          <h4 *ngIf="sessionUser.id !== user.id" (click)="changeUser(sessionUser)" id="friend">Back to My Page</h4>
+    </div>
+  </div>
+</div>
