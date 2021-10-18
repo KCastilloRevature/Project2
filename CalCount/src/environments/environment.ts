@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  findCredentials: "http://localhost:8000/users/login", 
-  createUser: "http://localhost:8000/users/new", 
-  findUser: "http://localhost:8000/users/{id}}", 
-  findUserFriends: "http://localhost:8000/users/{id}/friends", 
-  addFriend: "http://localhost:8000/users/{user_id}/add/{friend_id}",
+  findCredentials: "http://localhost:8080/users/login",
+  createUser: "http://localhost:8080/users/new",
+  findUser: "http://localhost:8080/users/{id}}",
+  findUserFriends: "http://localhost:8080/users/{id}/friends",
+  addFriend: "http://localhost:8080/users/{user_id}/add/{friend_id}",
 };
 
 /*

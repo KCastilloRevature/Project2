@@ -58,6 +58,7 @@ export class DayComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.sessionUser.id);
     this.getAllMeals(this.sessionUser, this.date);
+    console.log(this.date)
   }
 
   ngDoCheck(): void {

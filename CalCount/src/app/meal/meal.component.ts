@@ -1,4 +1,4 @@
-import { NgbDate, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCalendar, NgbDate, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 import { Component, Input, OnInit } from '@angular/core';
 import { Meal } from '../models/Meal';
 import { User } from '../models/User';
@@ -15,7 +15,7 @@ export class MealComponent implements OnInit {
   public mealForm: boolean = false;
   public exerciseForm: boolean = false;
 
-  @Input() public date: NgbDate = new NgbDate(0,0,0);
+  @Input() public date: NgbDate = this.calender.getToday();
 
   public user: User = {
     name: 'name',
@@ -28,7 +28,7 @@ export class MealComponent implements OnInit {
   };
 
 
-  constructor(private mealService: MealService,private dateFormatter: NgbDateParserFormatter) {}
+  constructor(private mealService: MealService, private calender: NgbCalendar,private dateFormatter: NgbDateParserFormatter) {}
 
   public meal: Meal = {
     id: 0,
@@ -37,7 +37,7 @@ export class MealComponent implements OnInit {
     calories: 0,
     description: '',
     exercise: false,
-    date: this.dateFormatter.format(this.date),
+    date: this.date.year+"-"+this.date.month+"-"+this.date.day,
   };
 
 
@@ -48,10 +48,13 @@ export class MealComponent implements OnInit {
     calories: 0,
     description: '',
     exercise: true,
-    date: this.dateFormatter.format(this.date),
+    date: this.date.year+"-"+this.date.month+"-"+this.date.day,
   };
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.date)
+    console.log(this.exercise.date)
+  }
 
   expandMealForm() {
     if (this.mealForm == false) {

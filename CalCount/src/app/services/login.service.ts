@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHandler} from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from '../models/User';
@@ -10,9 +10,13 @@ import { User } from '../models/User';
 })
 export class LoginService {
 
-  constructor(private httpClient:HttpClient) {}
+  constructor(private httpClient:HttpClient ) {}
 
-  findCredentials():Observable<User>{
-    return this.httpClient.get(environment.findCredentials) as Observable<User>;
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  };
+
+  findCredentials(user: User):Observable<User>{
+    return this.httpClient.post(environment.findCredentials, user) as Observable<User>;
   }
 }
