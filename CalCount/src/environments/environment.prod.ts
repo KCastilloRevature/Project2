@@ -1,6 +1,8 @@
 export const environment = {
   production: true,
-  findCredentials: "http://localhost:8000/users/login", //CHANGE THIS ONE
-  createUser: "http://localhost:8000/users/new", //CHANGE THIS ONE!!!
-  findUser: "http://localhost:8000/users/{id}}" //CHANGE THIS ONE!!
+  findCredentials: "http://calcount-bucket.s3-website-us-west-1.amazonaws.com/users/login", //CHANGE
+  createUser: "http://calcount-bucket.s3-website-us-west-1.amazonaws.com/users/new", //CHANGE
+  findUser: "http://calcount-bucket.s3-website-us-west-1.amazonaws.com/users/{id}}", //CHANGE
+  findUserFriends: "http://calcount-bucket.s3-website-us-west-1.amazonaws.com/users/{id}/friends", //CHANGE
+  addFriend: "http://calcount-bucket.s3-website-us-west-1.amazonaws.com/users/{user_id}/add/{friend_id}", //CHANGE
 };
