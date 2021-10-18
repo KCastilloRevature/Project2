@@ -7,8 +7,14 @@ form {
     display: inline-block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: crimson;;
-    background: darkblue;
+    background: greenyellow;
     border-radius: 1em 1em 1em 1em;
     border-style: solid;
     border-width: medium;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
