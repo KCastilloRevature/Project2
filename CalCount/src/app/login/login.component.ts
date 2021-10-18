@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService:LoginService, private router:Router) { 
+  constructor(private loginService:LoginService, private router:Router) {
   }
 
   user: User = {
@@ -38,9 +38,9 @@ export class LoginComponent implements OnInit {
 
   @Output()
   updateUserEvent = new EventEmitter<User>();
-  
+
   findCredentials(){
-    this.loginService.findCredentials().subscribe(
+    this.loginService.findCredentials(this.user).subscribe(
       (data: User) => {
         this.user = data;
       }
