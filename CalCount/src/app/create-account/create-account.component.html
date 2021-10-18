@@ -11,5 +11,5 @@
     <input [(ngModel)]= "user.height" type="text" id = "height" placeholder="height" name="height" required/><br>
     <label>Weight:</label>
     <input [(ngModel)]= "user.weight" type="text" id = "weight" placeholder="weight" name="weight" required/><br>
-    <a button (click) = "createUser()" routerLink = "login">Submit</a>
+    <a button (click) = "createUser()" [routerLink] = "['/login']">Submit</a>
 </form>
