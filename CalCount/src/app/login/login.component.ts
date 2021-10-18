@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { User } from 'src/app/models/User';
 import { LoginService } from 'src/app/services/login.service';
 import { EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService:LoginService) { 
+  constructor(private loginService:LoginService, private router:Router) { 
   }
 
   user: User = {
@@ -39,11 +40,14 @@ export class LoginComponent implements OnInit {
   updateUserEvent = new EventEmitter<User>();
   
   findCredentials(){
-    this.loginService.findCredentials(this.user).subscribe(
+    this.loginService.findCredentials().subscribe(
       (data: User) => {
         this.user = data;
       }
     )
+    this.updateUserState()
+
+    this.router.navigate(['day'])
   }
 
   updateUserState(){
