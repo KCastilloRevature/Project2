@@ -7,21 +7,21 @@ import { DayComponent } from './day/day.component';
 
 const routes: Routes = [
   {
-    path: "/login",
+    path: "login",
     component: LoginComponent
   },
 
   {
-    path: "/create-account",
+    path: "create-account",
     component: CreateAccountComponent
   },
 
   {
-    path: "/day",
+    path: "day",
     component: DayComponent
   }
   {
-    path: "/profile",
+    path: "profile",
     component: ProfileComponent
   }
 ];
