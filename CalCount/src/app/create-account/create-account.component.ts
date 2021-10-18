@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/User';
 import { CreateAccountService } from 'src/app/services/create-account.service';
 
@@ -9,7 +10,7 @@ import { CreateAccountService } from 'src/app/services/create-account.service';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor(private createAccountService:CreateAccountService) { }
+  constructor(private createAccountService:CreateAccountService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -17,10 +18,10 @@ export class CreateAccountComponent implements OnInit {
   user: User = {
     "id": 1,
     "name": "name",
-    "email": "email@email.com",
+    "email": "example@email.com",
     "password": "password",
-    "height": 150,
-    "weight": 50,
+    "height": 0,
+    "weight": 0,
     "friends": [],
 };
   
@@ -31,5 +32,7 @@ export class CreateAccountComponent implements OnInit {
           this.user = data; //this is just a placeholder, maybe this can be deleted?
         }
       )
+
+      this.router.navigate(['login'])
   }
 }
