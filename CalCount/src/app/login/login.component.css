@@ -5,10 +5,23 @@ h1 {
 
 form {
     display: inline-block;
+    margin: 0 auto;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: darkblue;
     background: crimson;
     border-radius: 1em 1em 1em 1em;
     border-style: solid;
     border-width: medium;
+}
+
+#login {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#register {
+    display: block;
+    text-align: center;
 }

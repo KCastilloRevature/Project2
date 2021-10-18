@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
   updateUserEvent = new EventEmitter<User>();
   
   findCredentials(){
-    this.loginService.findCredentials().subscribe(
+    this.loginService.findCredentials(this.user).subscribe(
       (data: User) => {
         this.user = data;
       }
