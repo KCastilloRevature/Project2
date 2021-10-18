@@ -10,7 +10,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService:LoginService) { 
+  constructor(private loginService:LoginService) {
   }
 
   user: User = {
@@ -37,9 +37,9 @@ export class LoginComponent implements OnInit {
 
   @Output()
   updateUserEvent = new EventEmitter<User>();
-  
+
   findCredentials(){
-    this.loginService.findCredentials().subscribe(
+    this.loginService.findCredentials(this.user).subscribe(
       (data: User) => {
         this.user = data;
       }

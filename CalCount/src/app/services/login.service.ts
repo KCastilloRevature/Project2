@@ -16,7 +16,7 @@ export class LoginService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  findCredentials():Observable<User>{
-    return this.httpClient.get(environment.findCredentials) as Observable<User>;
+  findCredentials(user: User):Observable<User>{
+    return this.httpClient.post(environment.findCredentials, user) as Observable<User>;
   }
 }
