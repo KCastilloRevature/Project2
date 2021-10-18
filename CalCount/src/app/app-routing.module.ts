@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { DayComponent } from './components/day/day.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { DayComponent } from './day/day.component';
 
 const routes: Routes = [
   {
-    path: "login",
+    path: "",
     component: LoginComponent
   },
 
@@ -19,11 +19,13 @@ const routes: Routes = [
   {
     path: "day",
     component: DayComponent
-  }
+  },
+
   {
     path: "profile",
     component: ProfileComponent
   }
+
 ];
 
 @NgModule({
@@ -31,4 +33,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
