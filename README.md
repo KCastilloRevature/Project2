@@ -29,5 +29,5 @@ create account page. Then, they must login on the home page (login page).
 All of the application's functionality will then be open after logging in.
 
 ## Contributors
-Kevin Castillo
-Jonathan Powers
+* Kevin Castillo
+* Jonathan Powers
