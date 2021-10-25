@@ -3,21 +3,21 @@
 A calorie counting web application
 
 ## Technologies Used
-Angular - Version 11   
-Spring MVC  
-MariaDB database hosted on a RDS on an EC2 
+* Angular - Version 11   
+* Spring MVC  
+* MariaDB database hosted on a RDS on an EC2 
 
 ## Features
-Can input foods eaten on certain days
-Can input excercises done on certain days
-Can check profile page
-Can add other users as friends
-Can see friends' calorie counting progress
+* Can input foods eaten on certain days
+* Can input excercises done on certain days
+* Can check profile page
+* Can add other users as friends
+* Can see friends' calorie counting progress
 
 ## To-Do List
-Add projected estimation if user is gaining or losing weight
-Add searchbar with predetermined foods and exercises
-Implement Nutrition API to automatically assign calorites to foods and exercises
+* Add projected estimation if user is gaining or losing weight
+* Add searchbar with predetermined foods and exercises
+* Implement Nutrition API to automatically assign calorites to foods and exercises
 
 ## Getting Started
 git clone https://github.com/KCastilloRevature/Project2/
